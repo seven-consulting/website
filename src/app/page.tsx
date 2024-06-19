@@ -1,17 +1,22 @@
-import About from '@/components/About';
-import Blog from '@/components/Blog';
-import Contact from '@/components/Contact';
-import Features from '@/components/Features';
-import Footer from '@/components/Footer';
-import { Hero } from '@/components/Hero';
-import Newsletter from '@/components/Newsletter';
-import Partners from '@/components/Partners';
-import Services from '@/components/Services';
-import Team from '@/components/Team';
+import { About } from '@/components/about';
+import { Blog } from '@/components/blog';
+import { Contact } from '@/components/contact';
+import { Features } from '@/components/features';
+import { Footer } from '@/components/footer';
+import { Hero } from '@/components/hero';
+import { Newsletter } from '@/components/newsletter';
+import { Partners } from '@/components/partners';
+import { Products } from '@/components/products';
+import { Team } from '@/components/team';
+import { metadata as m } from './metadata';
+
+export const revalidate = 21600; // 6 hours
+
+export const metadata = { ...m };
 
 export default function Home() {
   return (
-    <main>
+    <div>
       <Hero />
 
       <Partners />
@@ -20,17 +25,17 @@ export default function Home() {
 
       <Features />
 
-      <Team />
-
-      <Services />
+      <Products />
 
       <Blog />
+
+      <Team />
 
       <Contact />
 
       <Newsletter />
 
       <Footer />
-    </main>
+    </div>
   );
 }
