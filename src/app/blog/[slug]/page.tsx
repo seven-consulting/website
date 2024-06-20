@@ -33,6 +33,13 @@ export async function generateMetadata(
   return {
     title: post.title + ' | Seven Consulting',
     description: post.description,
+    keywords: [
+      ...post.postCategories.map((category) => category.name),
+      'artigo',
+      'blog',
+      'saúde e segurança no trabalho',
+      'sst',
+    ],
     openGraph: {
       title: post.title + ' | Seven Consulting',
       description: post.description,
