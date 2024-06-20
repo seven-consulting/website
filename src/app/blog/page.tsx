@@ -50,7 +50,7 @@ export default async function Articles() {
           </p>
         </div>
 
-        <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-8 border-t border-gray-200 pt-8 sm:mt-12 sm:pt-12 lg:mx-0 lg:max-w-none md:grid-cols-2 xl:grid-cols-3">
+        <div className="mx-auto mt-8 grid max-w-2xl grid-cols-1 gap-8 border-t border-gray-200 pt-8 sm:mt-12 sm:pt-12 lg:mx-0 lg:max-w-none md:grid-cols-2 xl:grid-cols-3">
           {posts.map((post) => (
             <Post key={`POST-${post.slug}`} post={post} />
           ))}
