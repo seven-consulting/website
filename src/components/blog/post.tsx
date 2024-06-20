@@ -26,7 +26,7 @@ const colors = [
   'fuchsia',
 ] as const;
 
-const category = cva('rounded-full px-3 py-1.5 font-medium', {
+const category = cva('rounded text-xs uppercase px-1.5 py-1 font-medium', {
   variants: {
     color: {
       orange: 'bg-orange-200 text-orange-600 hover:bg-orange-200/80',
@@ -70,13 +70,13 @@ export function Post({ post }: PostProps) {
 
   return (
     <Link className="flex items-center justify-center" href={`/blog/${post.slug}`}>
-      <article className="flex max-w-xl w-full flex-col items-start justify-between border border-gray-200 px-6 py-4 rounded-lg shadow">
+      <article className="max-w-xl w-full h-full border border-gray-200 px-6 py-4 rounded-lg shadow">
         <div className="flex items-center gap-x-4 text-xs">
           <time dateTime={post.createdAt} className="text-gray-500">
             {date}
           </time>
 
-          <div className="flex items-center space-x-1.5">
+          <div className="flex items-center flew-wrap space-x-1.5">
             {post.postCategories.map((category) => (
               <span key={category.name} className={categoryStyles}>
                 {category.name}
@@ -90,11 +90,7 @@ export function Post({ post }: PostProps) {
             {post.title}
           </h3>
 
-          <p
-            className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600"
-          >
-            {post.description}
-          </p>
+          <p className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
         </div>
       </article>
     </Link>
