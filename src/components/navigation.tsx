@@ -83,7 +83,10 @@ export function Navigation({ fixed, infinite }: NavigationProps) {
         <div className="flex lg:hidden">
           <button
             type="button"
-            className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            className={cn(
+              '-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700',
+              mobileMenuOpen && 'hidden'
+            )}
             onClick={() => setMobileMenuOpen(true)}
           >
             <span className="sr-only">Abrir menu de navegação</span>
@@ -112,7 +115,7 @@ export function Navigation({ fixed, infinite }: NavigationProps) {
 
             <button
               type="button"
-              className="-m-2.5 rounded-md p-2.5 text-gray-700"
+              className={cn('-m-2.5 rounded-md p-2.5 text-gray-700', !mobileMenuOpen && 'hidden')}
               onClick={() => setMobileMenuOpen(false)}
             >
               <span className="sr-only">Fechar menu de navegação</span>
