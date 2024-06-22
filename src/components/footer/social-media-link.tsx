@@ -1,10 +1,10 @@
-import { FacebookIcon, GlobeIcon, InstagramIcon, LinkedinIcon } from 'lucide-react';
+import { AiFillFacebook, AiFillInstagram, AiFillLinkedin, AiOutlineLink } from 'react-icons/ai';
 
 const ICONS = {
-  instagram: InstagramIcon,
-  facebook: FacebookIcon,
-  linkedin: LinkedinIcon,
-  outro: GlobeIcon,
+  instagram: AiFillInstagram,
+  facebook: AiFillFacebook,
+  linkedin: AiFillLinkedin,
+  outro: AiOutlineLink,
 };
 
 export function SocialMediaLink({
@@ -22,7 +22,7 @@ export function SocialMediaLink({
     <a target="_blank" href={link} className="text-gray-400">
       <span className="sr-only">Link de rede social</span>
 
-      <Icon />
+      <Icon className="w-6 h-6" />
     </a>
   );
 }
