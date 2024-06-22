@@ -32,8 +32,8 @@ export function Hero() {
             </h1>
 
             <p className="mt-6 text-lg leading-8 text-gray-600">
-              Desenvolvendo soluções através de uma logística eficiente <em>door-to-door</em> com
-              uma equipe de profissionais com mais de 20 anos de experiência no mercado
+              Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento
+              Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.
             </p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
