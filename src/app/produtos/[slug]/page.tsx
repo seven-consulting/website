@@ -1,11 +1,11 @@
 import { Footer } from '@/components/footer';
 import { Navigation } from '@/components/navigation';
 import { Newsletter } from '@/components/newsletter';
+import { ReturnToPreviousPage } from '@/components/return-to-previous-page';
 import { RichTextRenderer } from '@/components/rich-text-renderer';
 import { currencyFormat } from '@/utils/currency-format';
 import { ArrowLeftIcon, Share2Icon } from 'lucide-react';
 import { Metadata, ResolvingMetadata } from 'next';
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ShareButton } from '../../../components/share-button';
 import { getProduct } from './get-product';
@@ -72,12 +72,11 @@ export default async function Product({ params: { slug } }: { params: { slug: st
 
       <div className="max-w-screen-lg mx-auto px-6 lg:px-8 pb-16 pt-6">
         <div className="mb-12 flex items-center justify-between gap-6">
-          <Link
-            href="/"
-            className="rounded-md flex items-center bg-transparent border p-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-300/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
-          >
-            <ArrowLeftIcon className="w-4 h-4" />
-          </Link>
+          <ReturnToPreviousPage>
+            <button className="rounded-md flex items-center bg-transparent border p-2.5 text-sm font-semibold text-gray-900 shadow-sm hover:bg-gray-300/50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600">
+              <ArrowLeftIcon className="w-4 h-4" />
+            </button>
+          </ReturnToPreviousPage>
 
           <ShareButton
             config={{
