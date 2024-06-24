@@ -6,7 +6,10 @@ import { createTransport } from 'nodemailer';
 import { MailOptions } from 'nodemailer/lib/sendmail-transport';
 import { FormSchema } from './form-schema';
 
-const EMAIL_LIST = ['gerlain.lopes@sevenconsultingtraining.com'];
+const EMAIL_LIST = [
+  'gerlain.lopes@sevenconsultingtraining.com',
+  'lavinia.lopes.sevenconsulting@gmail.com',
+];
 
 export async function sendMessage({
   firstName,
