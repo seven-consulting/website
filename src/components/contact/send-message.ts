@@ -6,7 +6,7 @@ import { createTransport } from 'nodemailer';
 import { MailOptions } from 'nodemailer/lib/sendmail-transport';
 import { FormSchema } from './form-schema';
 
-const TO = 'geral@sevenconsultingtraining.com.br';
+const TO = 'contato@sevenconsultingtraining.com.br';
 
 const FROM = 'desenvolvedor@sevenconsultingtraining.com.br';
 
