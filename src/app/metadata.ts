@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   applicationName: 'Seven Consulting Training | Liderando com segurança há anos',
   description:
     'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
-  referrer: 'origin-when-cross-origin',
   category:
     'segurança e saúde no trabalho, consultoria, meio ambiente, treinamentos, capacitação, normas regulamentadoras',
   keywords: [
