@@ -24,6 +24,8 @@ const LINKS = [
 export async function Footer() {
   const socialMediaLinks = await getSocialMediaLinks();
 
+  const year = new Date().getFullYear();
+
   return (
     <footer id="footer" className="bg-white">
       <div className="mx-auto max-w-screen-xl overflow-hidden px-6 py-20 sm:py-24 lg:px-8">
@@ -49,11 +51,15 @@ export async function Footer() {
         </div>
 
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          geral@sevenconsultingtraining.com.br <br />
-          <br /> Rua Rep. Cinematografico Santiaho Ilidio de Andrade, lote 12, Quadra 600.
-          Itaipuacu, Marica, RJ
+          geral@sevenconsultingtraining.com.br
           <br />
-          <br />© 2024 Seven Consulting. Todos os direitos reservados
+          <br />
+          Rua Rep. Cinematografico Santiaho Ilidio de Andrade, lote 12, Quadra 600. Itaipuacu,
+          Marica, RJ
+          <br />
+          CNPJ 37.425.518/0001-87
+          <br />
+          <br />© {year} Seven Consulting. Todos os direitos reservados
         </p>
       </div>
     </footer>
