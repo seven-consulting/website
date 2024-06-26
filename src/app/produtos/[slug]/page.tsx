@@ -30,24 +30,54 @@ export async function generateMetadata(
   }
 
   return {
-    title: product.name + ' | Seven Consulting',
-    description: product?.description,
+    title: product.name + ' | Seven Consulting Training',
+    description: product.description,
+    keywords: [
+      'education',
+      'environment',
+      'consulting',
+      'segurança e saúde no trabalho',
+      'educação',
+      'consultoria de meio ambiente',
+      'consultoria',
+      'segurança',
+      'saúde',
+      'trabalho',
+      'treinamentos',
+      'capacitação',
+      'normas regulamentadoras',
+      'nr 5',
+      'nr 6',
+      'nr 11',
+      'nr 12',
+      'nr 15',
+      'nr 17',
+      'nr 18',
+      'nr 23',
+      'nr 33',
+      'nr 34',
+      'nr 35',
+      'nr 37',
+      'saúde e segurança no trabalho',
+      'sst',
+      'produtos e serviços',
+    ],
     openGraph: {
-      title: product.name + ' | Seven Consulting',
-      description: product?.description,
+      title: product.name + ' | Seven Consulting Training',
+      description: product.description,
       url: BASE_URL + '/produtos/' + slug,
       images: [
         {
           url: BASE_URL + '/images/white-bg-logo-margin.png',
-          width: 228,
-          height: 68,
-          alt: product.name + ' | Seven Consulting',
+          width: 512,
+          height: 226,
+          alt: product.name + ' | Seven Consulting Training',
         },
       ],
     },
     twitter: {
-      title: product.name + ' | Seven Consulting',
-      description: product?.description,
+      title: product.name + ' | Seven Consulting Training',
+      description: product.description,
       images: [BASE_URL + '/images/white-bg-logo-margin.png'],
     },
   };
@@ -79,8 +109,8 @@ export default async function Product({ params: { slug } }: { params: { slug: st
           <ShareButton
             config={{
               link: url,
-              linkTitle: product.name + ' | Seven Consulting',
-              textToShare: 'Dê uma olhada nesse produto da Seven Consulting!',
+              linkTitle: product.name + ' | Seven Consulting Training',
+              textToShare: 'Dê uma olhada nesse produto da Seven Consulting Training!',
               linkMetaDesc: product.description,
             }}
           >

@@ -4,10 +4,10 @@ const BASE_URL = process.env.BASE_URL as string;
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Seven Consulting | Liderando com segurança há anos',
-    short_name: 'Seven Consulting',
+    name: 'Seven Consulting Training | Liderando com segurança há anos',
+    short_name: 'Seven Consulting Training',
     description:
-      'Desenvolvendo soluções através de uma logística eficiente door-to-door com uma equipe de profissionais com mais de 20 anos de experiência no mercado',
+      'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
     start_url: BASE_URL,
     display: 'standalone',
     lang: 'pt-BR',

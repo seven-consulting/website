@@ -10,23 +10,23 @@ const BASE_URL = process.env.BASE_URL as string;
 export const revalidate = 21600; // 6 hours
 
 export const metadata: Metadata = {
-  title: 'Blog | Seven Consulting',
+  title: 'Blog | Seven Consulting Training',
   description: 'Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
   openGraph: {
-    title: 'Blog | Seven Consulting',
+    title: 'Blog | Seven Consulting Training',
     description: 'Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
     url: BASE_URL + '/blog',
     images: [
       {
         url: BASE_URL + '/images/white-bg-logo-margin.png',
-        width: 228,
-        height: 68,
-        alt: 'Seven Consulting | Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
+        width: 512,
+        height: 226,
+        alt: 'Seven Consulting Training | Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
       },
     ],
   },
   twitter: {
-    title: 'Blog | Seven Consulting',
+    title: 'Blog | Seven Consulting Training',
     description: 'Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
     images: [BASE_URL + '/images/white-bg-logo-margin.png'],
   },

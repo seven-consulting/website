@@ -10,23 +10,23 @@ const BASE_URL = process.env.BASE_URL as string;
 export const revalidate = 21600; // 6 hours
 
 export const metadata: Metadata = {
-  title: 'Produtos e Serviços | Seven Consulting',
+  title: 'Produtos e Serviços | Seven Consulting Training',
   description: 'Explore a nossa vasta gama de produtos e serviços',
   openGraph: {
-    title: 'Produtos | Seven Consulting',
+    title: 'Produtos e Serviços | Seven Consulting Training',
     description: 'Explore a nossa vasta gama de produtos e serviços',
     url: BASE_URL + '/produtos',
     images: [
       {
         url: BASE_URL + '/images/white-bg-logo-margin.png',
-        width: 228,
-        height: 68,
-        alt: 'Seven Consulting | Explore a nossa vasta gama de produtos e serviços',
+        width: 512,
+        height: 226,
+        alt: 'Seven Consulting Training | Explore a nossa vasta gama de produtos e serviços',
       },
     ],
   },
   twitter: {
-    title: 'Produtos | Seven Consulting',
+    title: 'Produtos e Serviços | Seven Consulting Training',
     description: 'Explore a nossa vasta gama de produtos e serviços',
     images: [BASE_URL + '/images/white-bg-logo-margin.png'],
   },

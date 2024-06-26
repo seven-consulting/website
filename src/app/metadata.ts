@@ -3,9 +3,8 @@ import { Metadata } from 'next';
 const BASE_URL = process.env.BASE_URL as string;
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
   creator: 'Miguel Rocha',
-  title: 'Seven Consulting | Liderando com segurança há anos',
+  title: 'Seven Consulting Training | Liderando com segurança há anos',
   applicationName: 'Seven Consulting Training | Liderando com segurança há anos',
   description:
     'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
@@ -38,12 +37,14 @@ export const metadata: Metadata = {
     'nr 34',
     'nr 35',
     'nr 37',
+    'sst',
   ],
   openGraph: {
-    title: 'Seven Consulting',
-    description: 'Liderando com segurança há anos',
+    title: 'Seven Consulting Training | Liderando com segurança há anos',
+    description:
+      'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
     url: BASE_URL,
-    siteName: 'Seven Consulting',
+    siteName: 'Seven Consulting Training',
     locale: 'pt_BR',
     type: 'website',
     emails: [
@@ -55,16 +56,17 @@ export const metadata: Metadata = {
     images: [
       {
         url: BASE_URL + '/images/white-bg-logo-margin.png',
-        width: 228,
-        height: 68,
-        alt: 'Seven Consulting | Liderando com segurança há anos',
+        width: 512,
+        height: 226,
+        alt: 'Seven Consulting Training | Liderando com segurança há anos',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Seven Consulting',
-    description: 'Liderando com segurança há anos',
+    title: 'Seven Consulting Training | Liderando com segurança há anos',
+    description:
+      'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
     images: [BASE_URL + '/images/white-bg-logo-margin.png'],
   },
 };
