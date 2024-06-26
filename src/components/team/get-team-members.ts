@@ -8,6 +8,7 @@ interface TeamMember {
   picture: {
     url: string;
   };
+  contacts: { type: 'phone' | 'email' | 'other'; value: string }[];
 }
 
 interface Result {
@@ -25,6 +26,7 @@ const Schema = gql`
       picture {
         url
       }
+      contacts
     }
   }
 `;

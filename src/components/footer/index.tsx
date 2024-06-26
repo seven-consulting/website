@@ -49,7 +49,11 @@ export async function Footer() {
         </div>
 
         <p className="mt-10 text-center text-xs leading-5 text-gray-500">
-          © 2024 Seven Consulting. Todos os direitos reservados
+          geral@sevenconsultingtraining.com.br <br />
+          <br /> Rua Rep. Cinematografico Santiaho Ilidio de Andrade, lote 12, Quadra 600.
+          Itaipuacu, Marica, RJ
+          <br />
+          <br />© 2024 Seven Consulting. Todos os direitos reservados
         </p>
       </div>
     </footer>

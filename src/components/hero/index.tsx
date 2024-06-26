@@ -2,7 +2,14 @@ import Link from 'next/link';
 import { Navigation } from '../navigation';
 import { StarredPost } from './starred-post';
 
-export function Hero() {
+interface HeroProps {
+  texts: {
+    heading: string;
+    description: string;
+  };
+}
+
+export function Hero({ texts }: HeroProps) {
   return (
     <>
       <Navigation fixed infinite />
@@ -28,13 +35,10 @@ export function Hero() {
 
           <div className="text-center">
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">
-              Liderando com segurança há anos
+              {texts.heading}
             </h1>
 
-            <p className="mt-6 text-lg leading-8 text-gray-600">
-              Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento
-              Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.
-            </p>
+            <p className="mt-6 text-lg leading-8 text-gray-600">{texts.description}</p>
 
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link

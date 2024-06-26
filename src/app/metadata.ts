@@ -5,11 +5,13 @@ const BASE_URL = process.env.BASE_URL as string;
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   creator: 'Miguel Rocha',
-  title: 'Seven Consulting',
-  description: 'Liderando com segurança há anos',
-  applicationName: 'Seven Consulting',
+  title: 'Seven Consulting | Liderando com segurança há anos',
+  applicationName: 'Seven Consulting Training | Liderando com segurança há anos',
+  description:
+    'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
   referrer: 'origin-when-cross-origin',
-  category: 'segurança e saúde no trabalho',
+  category:
+    'segurança e saúde no trabalho, consultoria, meio ambiente, treinamentos, capacitação, normas regulamentadoras',
   keywords: [
     'education',
     'environment',
@@ -44,12 +46,15 @@ export const metadata: Metadata = {
     siteName: 'Seven Consulting',
     locale: 'pt_BR',
     type: 'website',
-    // TODO: CHANGE EMAIL
-    emails: ['sevenconsulting@gmail.com'],
-    // TODO: MAKE OG IMAGES
+    emails: [
+      'geral@sevenconsultingtraining.com.br',
+      'contato@sevenconsultingtraining.com.br',
+      'gerlain.lopes@sevenconsultingtraining.com.br',
+      'lavinia.lopes@sevenconsultingtraining.com.br',
+    ],
     images: [
       {
-        url: BASE_URL + '/logo.png',
+        url: BASE_URL + '/images/white-bg-logo-margin.png',
         width: 228,
         height: 68,
         alt: 'Seven Consulting | Liderando com segurança há anos',
@@ -60,7 +65,6 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Seven Consulting',
     description: 'Liderando com segurança há anos',
-    // TODO: MAKE OG IMAGES
-    images: [BASE_URL + '/logo.png'],
+    images: [BASE_URL + '/images/white-bg-logo-margin.png'],
   },
 };

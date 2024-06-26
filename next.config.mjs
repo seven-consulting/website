@@ -7,6 +7,10 @@ const nextConfig = {
         hostname: '**.graphassets.com',
         port: '',
       },
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+      },
     ],
   },
 };

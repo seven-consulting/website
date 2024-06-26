@@ -18,17 +18,95 @@ export async function Team() {
         </div>
 
         <ul role="list" className="grid gap-x-8 gap-y-12 sm:grid-cols-2 sm:gap-y-16 xl:col-span-2">
-          {teamMembers.map(({ id, name, picture, role }) => (
+          {teamMembers.map(({ id, name, picture, role, contacts }) => (
             <li key={`TEAM-MEMBER-${id}`}>
               <Member
                 member={{
                   name,
                   pictureUrl: picture.url,
                   role,
+                  contacts,
                 }}
               />
             </li>
           ))}
+
+          <li>
+            <Member
+              member={{
+                name: 'Miguel Rocha',
+                pictureUrl: 'https://github.com/mmroch4.png',
+                role: 'Desenvolvedor',
+                contacts: [
+                  {
+                    type: 'email',
+                    value: 'miguelrocha.dev@gmail.com',
+                  },
+                  {
+                    type: 'phone',
+                    value: '+351 924 718 182',
+                  },
+                ],
+              }}
+            />
+          </li>
+          <li>
+            <Member
+              member={{
+                name: 'Miguel Rocha',
+                pictureUrl: 'https://github.com/mmroch4.png',
+                role: 'Desenvolvedor',
+                contacts: [
+                  {
+                    type: 'email',
+                    value: 'miguelrocha.dev@gmail.com',
+                  },
+                  {
+                    type: 'phone',
+                    value: '+351 924 718 182',
+                  },
+                ],
+              }}
+            />
+          </li>
+          <li>
+            <Member
+              member={{
+                name: 'Miguel Rocha',
+                pictureUrl: 'https://github.com/mmroch4.png',
+                role: 'Desenvolvedor',
+                contacts: [
+                  {
+                    type: 'email',
+                    value: 'miguelrocha.dev@gmail.com',
+                  },
+                  {
+                    type: 'phone',
+                    value: '+351 924 718 182',
+                  },
+                ],
+              }}
+            />
+          </li>
+          <li>
+            <Member
+              member={{
+                name: 'Miguel Rocha',
+                pictureUrl: 'https://github.com/mmroch4.png',
+                role: 'Desenvolvedor',
+                contacts: [
+                  {
+                    type: 'email',
+                    value: 'miguelrocha.dev@gmail.com',
+                  },
+                  {
+                    type: 'phone',
+                    value: '+351 924 718 182',
+                  },
+                ],
+              }}
+            />
+          </li>
         </ul>
       </div>
     </section>

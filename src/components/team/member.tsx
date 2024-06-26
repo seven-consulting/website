@@ -1,16 +1,18 @@
 import Image from 'next/image';
+import { ContactList } from './contact-list';
 
 interface MemberProps {
   member: {
     name: string;
     role: string;
     pictureUrl: string;
+    contacts: { type: 'phone' | 'email' | 'other'; value: string }[];
   };
 }
 
 export function Member({ member }: MemberProps) {
   return (
-    <div className="flex items-center gap-x-6">
+    <div className="flex gap-x-6">
       <Image
         className="h-16 w-16 rounded-full"
         src={member.pictureUrl}
@@ -25,6 +27,8 @@ export function Member({ member }: MemberProps) {
         </h3>
 
         <p className="text-sm font-semibold leading-6 text-teal-600">{member.role}</p>
+
+        <ContactList contacts={member.contacts} />
       </div>
     </div>
   );

@@ -16,10 +16,9 @@ export const metadata: Metadata = {
     title: 'Blog | Seven Consulting',
     description: 'Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
     url: BASE_URL + '/blog',
-    // TODO: MAKE OG IMAGES
     images: [
       {
-        url: BASE_URL + '/logo.png',
+        url: BASE_URL + '/images/white-bg-logo-margin.png',
         width: 228,
         height: 68,
         alt: 'Seven Consulting | Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
@@ -29,8 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Blog | Seven Consulting',
     description: 'Dê uma olhada nos nossos artigos e fique a par das últimas novidades',
-    // TODO: MAKE OG IMAGES
-    images: [BASE_URL + '/logo.png'],
+    images: [BASE_URL + '/images/white-bg-logo-margin.png'],
   },
 };
 

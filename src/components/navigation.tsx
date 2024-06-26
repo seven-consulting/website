@@ -52,7 +52,7 @@ export function Navigation({ fixed, infinite }: NavigationProps) {
                 className="h-10 w-auto"
                 width={150}
                 height={40}
-                src="/logo.svg"
+                src="/images/no-bg-logo.png"
                 alt="Seven Consulting Logo"
               />
             </div>
@@ -108,7 +108,7 @@ export function Navigation({ fixed, infinite }: NavigationProps) {
                 className="h-10 w-auto"
                 width={150}
                 height={40}
-                src="/logo.svg"
+                src="/images/no-bg-logo.png"
                 alt="Seven Consulting Logo"
               />
             </Link>

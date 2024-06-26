@@ -8,22 +8,52 @@ import { Newsletter } from '@/components/newsletter';
 import { Partners } from '@/components/partners';
 import { Products } from '@/components/products';
 import { Team } from '@/components/team';
+import { getTexts } from './get-texts';
 import { metadata as m } from './metadata';
 
 export const revalidate = 21600; // 6 hours
 
 export const metadata = { ...m };
 
-export default function Home() {
+export default async function Home() {
+  const texts = await getTexts();
+
   return (
     <div>
-      <Hero />
+      <Hero
+        texts={{
+          heading: texts.heading || '',
+          description: texts.description || '',
+        }}
+      />
 
       <Partners />
 
-      <About />
+      <About
+        texts={{
+          slogan: texts.aboutSlogan || '',
+          heading: texts.aboutTitle || '',
+          lead: texts.aboutLead || '',
+          content: texts.about.raw || { children: [] },
+        }}
+      />
 
-      <Features />
+      <Features
+        texts={{
+          areaOneIcon: texts.areaOneIcon,
+          areaOne: texts.areaOne || '',
+          areaOneDescription: texts.areaOneDescription || '',
+          areaTwoIcon: texts.areaTwoIcon,
+          areaTwo: texts.areaTwo || '',
+          areaTwoDescription: texts.areaTwoDescription || '',
+          areaThreeIcon: texts.areaThreeIcon,
+          areaThree: texts.areaThree || '',
+          areaThreeDescription: texts.areaThreeDescription || '',
+          areaFourIcon: texts.areaFourIcon,
+          areaFour: texts.areaFour || '',
+          areaFourDescription: texts.areaFourDescription || '',
+        }}
+      />
 
       <Products />
 

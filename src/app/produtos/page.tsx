@@ -16,10 +16,9 @@ export const metadata: Metadata = {
     title: 'Produtos | Seven Consulting',
     description: 'Explore a nossa vasta gama de produtos e serviços',
     url: BASE_URL + '/produtos',
-    // TODO: MAKE OG IMAGES
     images: [
       {
-        url: BASE_URL + '/logo.png',
+        url: BASE_URL + '/images/white-bg-logo-margin.png',
         width: 228,
         height: 68,
         alt: 'Seven Consulting | Explore a nossa vasta gama de produtos e serviços',
@@ -29,8 +28,7 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Produtos | Seven Consulting',
     description: 'Explore a nossa vasta gama de produtos e serviços',
-    // TODO: MAKE OG IMAGES
-    images: [BASE_URL + '/logo.png'],
+    images: [BASE_URL + '/images/white-bg-logo-margin.png'],
   },
 };
 

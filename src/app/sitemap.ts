@@ -1,8 +1,13 @@
+import { getPosts } from '@/components/blog/get-posts';
+import { getProducts } from '@/components/products/get-products';
 import { MetadataRoute } from 'next';
 
 const BASE_URL = process.env.BASE_URL as string;
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  const posts = await getPosts();
+  const products = await getProducts();
+
   return [
     {
       url: BASE_URL,
@@ -19,5 +24,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.8,
     },
+    ...products.map((product) => ({
+      url: BASE_URL + '/produtos/' + product.slug,
+      lastModified: product.updatedAt,
+    })),
+    ...posts.map((post) => ({
+      url: BASE_URL + '/blog/' + post.slug,
+      lastModified: post.updatedAt,
+    })),
   ];
 }

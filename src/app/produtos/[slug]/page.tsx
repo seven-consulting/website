@@ -36,10 +36,9 @@ export async function generateMetadata(
       title: product.name + ' | Seven Consulting',
       description: product?.description,
       url: BASE_URL + '/produtos/' + slug,
-      // TODO: MAKE OG IMAGES
       images: [
         {
-          url: BASE_URL + '/logo.png',
+          url: BASE_URL + '/images/white-bg-logo-margin.png',
           width: 228,
           height: 68,
           alt: product.name + ' | Seven Consulting',
@@ -49,8 +48,7 @@ export async function generateMetadata(
     twitter: {
       title: product.name + ' | Seven Consulting',
       description: product?.description,
-      // TODO: MAKE OG IMAGES
-      images: [BASE_URL + '/logo.png'],
+      images: [BASE_URL + '/images/white-bg-logo-margin.png'],
     },
   };
 }

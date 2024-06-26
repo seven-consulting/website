@@ -3,7 +3,7 @@
 import { Loader2Icon } from 'lucide-react';
 import dynamic from 'next/dynamic';
 import { ReactNode, useEffect, useState } from 'react';
-import logo from '../../public/logo.png';
+import logo from '../../public/images/white-bg-logo-margin.png';
 
 const ShareOnSocial = dynamic(() => import('react-share-on-social'), { ssr: false });
 

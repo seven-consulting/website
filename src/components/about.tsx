@@ -1,6 +1,16 @@
 import Image from 'next/image';
+import { RichTextRenderer } from './rich-text-renderer';
 
-export function About() {
+interface AboutProps {
+  texts: {
+    slogan: string;
+    heading: string;
+    lead: string;
+    content: any;
+  };
+}
+
+export function About({ texts }: AboutProps) {
   return (
     <section
       className="relative isolate overflow-hidden bg-white px-6 py-24 sm:py-32 lg:overflow-visible lg:px-0"
@@ -42,17 +52,13 @@ export function About() {
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
             <div className="lg:max-w-lg">
-              <p className="text-base font-semibold leading-7 text-teal-600">#1 Segurança</p>
+              <p className="text-base font-semibold leading-7 text-teal-600">{texts.slogan}</p>
 
               <h1 className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Quem somos?
+                {texts.heading}
               </h1>
 
-              <p className="mt-6 text-xl leading-8 text-gray-700">
-                A Seven Consulting é uma empresa nova no mercado, mas com profissionais com muita
-                experiência na área de QSMS, ISO 9001, ISO 14000, OSHA (Occupational Safety and
-                Health Association) sabendo as necessidades das empresas.
-              </p>
+              <p className="mt-6 text-xl leading-8 text-gray-700">{texts.lead}</p>
             </div>
           </div>
         </div>
@@ -60,40 +66,18 @@ export function About() {
         <div className="-ml-12 -mt-12 p-12 lg:sticky lg:top-4 lg:col-start-2 lg:row-span-2 lg:row-start-1 lg:overflow-hidden">
           <Image
             className="scale-x-[-1] w-[48rem] max-w-none rounded-xl bg-gray-900 shadow-xl ring-1 ring-gray-400/10 sm:w-[57rem] object-right"
-            src="/working-site.jpg"
-            alt="Imagem de um navio cargueiro"
-            width={768}
-            height={768}
+            src="/images/working-site.jpg"
+            alt="Imagem de uma inspeção em uma fábrica"
+            width={900}
+            height={900}
+            quality={100}
           />
         </div>
 
         <div className="lg:col-span-2 lg:col-start-1 lg:row-start-2 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
           <div className="lg:pr-4">
-            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
-              <p>
-                Nossos profissionais são qualificados e certificados para atender as necessidades
-                das empresas nas áreas de: treinamentos Industriais, Consultoria em Segurança do
-                Trabalho, Prestação de serviços em resgate em espaços confinados, resgate em altura,
-                dentre outros. Visando aumentar os padrões de segurança das atividades que envolvam
-                riscos aos colaboradores. Auditorias internas e externas, adequação as normas.
-                <br />
-                <br />
-                Temos um corpo técnico com 20 anos de experiência no mercado de óleo e gás, aonde o
-                maior diferencial está no entendimento da demanda com o conhecimento técnico e
-                operacional, o que possibilita apresentar a melhor solução com o melhor beneficio ao
-                cliente.
-                <br />
-                <br />
-                Nossa missão consiste em valorizar todos os envolvidos em nossos negócios
-                comerciais, provendo ofertas com produtos de maior qualidade, ao menor preço e com o
-                menor prazo, garantindo, assim, a satisfação total dos nossos clientes, de forma
-                clara e totalmente Ética.
-                <br />
-                <br />
-                Nossos objetivos consistem em alcançar e manter a melhor qualidade no serviço,
-                ofertando os melhores produtos para desenvolver um relacionamento de sucesso com
-                nossos clientes.
-              </p>
+            <div className="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg space-y-3">
+              <RichTextRenderer raw={texts.content} />
             </div>
           </div>
         </div>
