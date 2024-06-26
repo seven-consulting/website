@@ -1,6 +1,11 @@
 {
   "name": "sevenconsultingtraining",
   "version": "0.1.0",
+  "author": {
+    "email": "miguelrocha.dev@gmail.com",
+    "name": "Miguel Rocha",
+    "url": "https://github.com/mmroch4"
+  },
   "private": true,
   "scripts": {
     "dev": "next dev",
