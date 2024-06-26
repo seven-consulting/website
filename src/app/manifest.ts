@@ -8,7 +8,7 @@ export default function manifest(): MetadataRoute.Manifest {
     short_name: 'Seven Consulting Training',
     description:
       'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
-    start_url: BASE_URL,
+    start_url: BASE_URL + '/',
     display: 'standalone',
     lang: 'pt-BR',
     background_color: '#fff',

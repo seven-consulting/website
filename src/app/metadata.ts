@@ -4,8 +4,10 @@ const BASE_URL = process.env.BASE_URL as string;
 
 export const metadata: Metadata = {
   creator: 'Miguel Rocha',
+  robots: { index: true, follow: true },
   title: 'Seven Consulting Training | Liderando com segurança há anos',
   applicationName: 'Seven Consulting Training | Liderando com segurança há anos',
+  manifest: BASE_URL + '/manifest.webmanifest',
   description:
     'Desenvolvendo soluções em treinamentos de Segurança do Trabalho, Licenciamento Ambiental e programas como PGRO, LTCAT, estudos de viabilidade (LP, LI, LO), etc.',
   category:
