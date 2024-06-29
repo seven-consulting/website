@@ -9,6 +9,7 @@ import { ArrowLeftIcon, Share2Icon } from 'lucide-react';
 import { DateTime } from 'luxon';
 import { Metadata, ResolvingMetadata } from 'next';
 import { notFound } from 'next/navigation';
+import { metadata as m } from '../../metadata';
 import { getPost } from './get-post';
 
 const BASE_URL = process.env.BASE_URL as string;
@@ -34,36 +35,10 @@ export async function generateMetadata(
     title: post.title + ' | Seven Consulting Training',
     description: post.description,
     keywords: [
-      'education',
-      'environment',
-      'consulting',
-      'segurança e saúde no trabalho',
-      'educação',
-      'consultoria de meio ambiente',
-      'consultoria',
-      'segurança',
-      'saúde',
-      'trabalho',
-      'treinamentos',
-      'capacitação',
-      'normas regulamentadoras',
-      'nr 5',
-      'nr 6',
-      'nr 11',
-      'nr 12',
-      'nr 15',
-      'nr 17',
-      'nr 18',
-      'nr 23',
-      'nr 33',
-      'nr 34',
-      'nr 35',
-      'nr 37',
+      ...(m.keywords as string[]),
       ...post.postCategories.map((category) => category.name),
       'artigo',
       'blog',
-      'saúde e segurança no trabalho',
-      'sst',
     ],
     openGraph: {
       title: post.title + ' | Seven Consulting Training',
