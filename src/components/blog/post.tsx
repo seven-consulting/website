@@ -72,25 +72,25 @@ export function Post({ post }: PostProps) {
     <Link className="flex items-center justify-center" href={`/blog/${post.slug}`}>
       <article className="max-w-xl w-full h-full border border-gray-200 px-6 py-4 rounded-lg shadow">
         <div className="flex items-center gap-x-4 text-xs">
-          <time dateTime={post.createdAt} className="text-gray-500">
+          <time dateTime={post.createdAt} className="text-gray-500 flex-1">
             {date}
           </time>
-
-          <div className="flex items-center flew-wrap space-x-1.5">
-            {post.postCategories.map((category) => (
-              <span key={category.name} className={categoryStyles}>
-                {category.name}
-              </span>
-            ))}
-          </div>
         </div>
 
-        <div className="group relative">
+        <div className="group relative mb-2">
           <h3 className="mt-3 text-lg font-semibold leading-6 text-gray-900 group-hover:text-gray-600">
             {post.title}
           </h3>
 
           <p className="mt-2 line-clamp-3 text-sm leading-6 text-gray-600">{post.description}</p>
+        </div>
+
+        <div className="flex items-center flew-wrap space-x-1.5">
+          {post.postCategories.map((category) => (
+            <span key={category.name} className={categoryStyles}>
+              {category.name}
+            </span>
+          ))}
         </div>
       </article>
     </Link>
