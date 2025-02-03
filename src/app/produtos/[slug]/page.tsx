@@ -3,9 +3,9 @@ import { Navigation } from '@/components/navigation';
 import { Newsletter } from '@/components/newsletter';
 import { ReturnToPreviousPage } from '@/components/return-to-previous-page';
 import { RichTextRenderer } from '@/components/rich-text-renderer';
-import { currencyFormat } from '@/utils/currency-format';
 import { ArrowLeftIcon, Share2Icon } from 'lucide-react';
 import { Metadata, ResolvingMetadata } from 'next';
+import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ShareButton } from '../../../components/share-button';
 import { metadata as m } from '../../metadata';
@@ -64,8 +64,6 @@ export default async function Product({ params: { slug } }: { params: { slug: st
 
   const url = process.env.BASE_URL + '/produtos/' + slug;
 
-  const formattedPrice = currencyFormat(product.price);
-
   return (
     <div>
       <Navigation />
@@ -95,14 +93,6 @@ export default async function Product({ params: { slug } }: { params: { slug: st
 
         <section id={`produto-${product.slug}`} className="flex flex-col">
           <div className="space-y-3 mb-8">
-            {product.discount && (
-              <div>
-                <span className="text-xs font-medium px-1.5 py-0.5 bg-red-500 rounded text-white">
-                  {product.discount}% DESCONTO
-                </span>
-              </div>
-            )}
-
             <h1 className="text-3xl font-extrabold tracking-tight text-gray-900 sm:text-4xl md:text-5xl">
               {product.name}
             </h1>
@@ -111,21 +101,14 @@ export default async function Product({ params: { slug } }: { params: { slug: st
               {product.description}
             </p>
 
-            <div>
-              <h2 className="text-xl font-bold flex items-center flex-wrap">
-                {product.discount ? (
-                  <>
-                    <span className="line-through decoration-red-500 decoration-2">
-                      {formattedPrice}
-                    </span>{' '}
-                    <span className="text-red-500 font-bold">
-                      {currencyFormat((product.price * (100 - product.discount)) / 100)}
-                    </span>
-                  </>
-                ) : (
-                  formattedPrice
-                )}
-              </h2>
+            <div className="flex gap-3 items-center justify-start font-semibold flex-wrap">
+              🧐 Temos uma oferta especial para você
+              <Link
+                href="/#contato"
+                className="text-lg tracking-tight gap-2 font-bold inline-flex items-center flex-wrap rounded-md bg-teal-600 px-3.5 py-2.5 text-white shadow-sm hover:bg-teal-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal-600"
+              >
+                VAMOS CONVERSAR!!
+              </Link>
             </div>
           </div>
 

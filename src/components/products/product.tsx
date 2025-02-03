@@ -34,19 +34,6 @@ export function Product({ product }: ProductProps) {
       </div>
 
       <h3 className="mt-4 text-sm text-gray-700">{product.name}</h3>
-
-      <p className="mt-1 text-lg font-medium text-gray-900">
-        {product.discount ? (
-          <>
-            <span className="line-through decoration-red-500 decoration-2">{formattedPrice}</span>{' '}
-            <span className="text-red-500 font-bold">
-              {currencyFormat((product.price * (100 - product.discount)) / 100)}
-            </span>
-          </>
-        ) : (
-          formattedPrice
-        )}
-      </p>
     </Link>
   );
 }
