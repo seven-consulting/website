@@ -16,7 +16,7 @@ interface Result {
 
 const Schema = gql`
   query GetStarredPost {
-    starredPosts(orderBy: publishedAt_ASC, first: 1) {
+    starredPosts(orderBy: publishedAt_DESC, first: 1) {
       post {
         slug
         title
