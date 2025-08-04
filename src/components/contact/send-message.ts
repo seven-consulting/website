@@ -8,7 +8,7 @@ import { FormSchema } from './form-schema';
 
 const TO = 'contato@sevenconsultingtraining.com.br';
 
-const FROM = 'desenvolvedor@sevenconsultingtraining.com.br';
+const FROM = 'contato@sevenconsultingtraining.com.br';
 
 export async function sendMessage({
   firstName,
@@ -26,7 +26,7 @@ export async function sendMessage({
     const mailOptions: MailOptions = {
       to: TO,
       from: FROM,
-      subject: `Nova mensagem de ${firstName} ${lastName}`,
+      subject: `Nova mensagem de ${firstName} ${lastName} - Formulário de Contato Website`,
       html: emailHtml,
     };
 

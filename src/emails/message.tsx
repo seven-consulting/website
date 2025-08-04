@@ -58,7 +58,11 @@ export function Message({
 
         <Body className="font-default bg-gray-1 text-gray-12">
           <Container className="mx-auto px-6 pb-12 pt-5">
-            <Img src={`${baseUrl}/images/white-bg-logo-margin.png`} alt="Seven Consulting Logo" />
+            <Img
+              className="h-36"
+              src={`${baseUrl}/images/white-bg-logo-margin.png`}
+              alt="Seven Consulting Logo"
+            />
 
             <Text className="mt-12 text-3xl font-bold">💬 Nova mensagem</Text>
 
